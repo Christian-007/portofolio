@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    %meta{ :'http-equiv' => 'X-UA-Compatible', content: 'IE=edge' }
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Portfolio
+    = stylesheet_link_tag    "application", media: :all
+    = javascript_include_tag "application"
+    = favicon_link_tag '/favicon.ico'
+    = csrf_meta_tags
+  %body
+    %nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{:href => "#"} Brand
+
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li.active
+              %a{:href => "#"} Link
+              %span.sr-only (current)
+            %li
+              %a{:href => "#"} Link
+
+
+    #main-container.container
+      = yield

@@ -1,0 +1,26 @@
+%h1 Listing homes
+
+.jumbotron
+  %h1 Hello, world!
+  %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+  %p
+    %a.btn.btn-primary.btn-lg{:href => "#", :role => "button"} Learn more
+
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @homes.each do |home|
+      %tr
+        %td= link_to 'Show', home
+        %td= link_to 'Edit', edit_home_path(home)
+        %td= link_to 'Destroy', home, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Home', new_home_path
