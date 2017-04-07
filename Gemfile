@@ -1,17 +1,9 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
 gem 'rails', '~> 5.0.1'
 gem 'responders', '> 2.1'
 gem 'activerecord-session_store', '~> 1.0.0'
 gem 'thin'
-
-gem 'sqlite3'
-gem 'pg'
 
 gem 'haml-rails'
 gem 'sass-rails', '~> 5.0'
@@ -58,6 +50,15 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
