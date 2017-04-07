@@ -1,26 +1,68 @@
-%h1 Listing homes
+%div#home
 
-.jumbotron
-  %h1 Hello, world!
-  %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-  %p
-    %a.btn.btn-primary.btn-lg{:href => "#", :role => "button"} Learn more
+  .table-wrapper
+    .table-cell.text-center
+      .row.text-left
+        .col-xs-6.col-xs-offset-1
+          %p Enthusiast programmer and web developer based in Sheffield
+    
+      %a.arrow.bounce{:href => ""}
+        %i.fa.fa-angle-double-down{"aria-hidden" => "true"}
 
+%div#about.features
+  .row
+    .col-sm-6.hidden-xs.feature-title.text-center
+      %p 
+        About
+    .col-sm-6.col-xs-12.feature-detail
+      %h1.visible-xs.text-center About
+      %p I am studying for an MSc (Eng) Advanced Software Engineering at the University of Sheffield at the moment. As part of my study, I have the opportunity to work in a student-run software company that provides custom web applications for a variety of customers. Through this course, I can learn something new and hone my skills to become a better software developer.
 
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
+%div#skills.features
+  .row
+    .col-sm-6.hidden-xs.feature-title.text-center
+      %p 
+        Skills
+    .col-sm-6.col-xs-12.feature-detail
+      %h1.visible-xs.text-center Skills
 
-  %tbody
-    - @homes.each do |home|
-      %tr
-        %td= link_to 'Show', home
-        %td= link_to 'Edit', edit_home_path(home)
-        %td= link_to 'Destroy', home, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %h4 WEB TECHNOLOGIES
+      %p HTML5, CSS3, SASS, JavaScript, PHP, Bootstrap, jQuery, Angular.js, AJAX, JSON, Grunt.js, Ruby on Rails
+      %br/
 
-%br
+      %h4 NATIVE PROGRAMMING LANGUAGE
+      %p Java, C#, Python, Objective-C, C++
+      %br/
 
-= link_to 'New Home', new_home_path
+      %h4 VERSION CONTROL
+      %p Github, GitLab
+      %br/
+
+      %h4 CROSS-PLATFORM TOOLS
+      %p PhoneGap
+      %br/
+
+      %h4 DESIGN & PROTOTYPE
+      %p Moqups
+      %br/
+      
+      %h4 DATABASE
+      %p MySQL
+  
+  / %table
+  /   %thead
+  /     %tr
+  /       %th
+  /       %th
+  /       %th
+
+  /   %tbody
+  /     - @homes.each do |home|
+  /       %tr
+  /         %td= link_to 'Show', home
+  /         %td= link_to 'Edit', edit_home_path(home)
+  /         %td= link_to 'Destroy', home, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+  / %br
+
+  / = link_to 'New Home', new_home_path

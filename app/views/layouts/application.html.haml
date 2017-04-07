@@ -10,24 +10,29 @@
     = favicon_link_tag '/favicon.ico'
     = csrf_meta_tags
   %body
-    %nav.navbar.navbar-default
-      .container-fluid
+    %nav.navbar.navbar-fixed-top.customised-navbar.navbar-inverse
+      .container
         .navbar-header
-          %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+          %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#nav-collapse", "data-toggle" => "collapse", :type => "button"}
             %span.sr-only Toggle navigation
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.navbar-brand{:href => "#"} Brand
+          %a.navbar-brand{:href => "#"} 
+            %b christian
 
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          %ul.nav.navbar-nav
-            %li.active
-              %a{:href => "#"} Link
+        #nav-collapse.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a{:href => "#"} About
               %span.sr-only (current)
             %li
-              %a{:href => "#"} Link
+              %a{:href => "#"} Skills
+            %li
+              %a{:href => "#"} Projects
+            %li
+              %a{:href => "#"} Contact
 
 
-    #main-container.container
+    #main-container
       = yield
