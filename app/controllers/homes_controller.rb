@@ -5,6 +5,9 @@ class HomesController < ApplicationController
   # GET /homes.json
   def index
     @homes = Home.all
+    @webtech_skills = ['HTML5', 'CSS3', 'SASS', 'JavaScript', 'PHP', 'Bootstrap', 'jQuery', 'Angular.js', 'Grunt.js', 'Ruby on Rails']
+    @native_skills = ['Java', 'C#', 'Python', 'Objective-C', 'C++']
+    @version_skills = ['Github', 'GitLab', 'Heroku']
   end
 
   # GET /homes/1

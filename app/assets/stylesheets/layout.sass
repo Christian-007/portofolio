@@ -34,6 +34,14 @@ html,body
   .row
     margin: 0
 
+  span.skills
+    display: inline-block
+    margin: 5px 2px
+    border: 1px solid #00CCCB
+    border-radius: 8px
+    padding: 7px 18px
+    color: #e4e4e4
+
   #home
     height: 100%
     width: 100%
@@ -45,8 +53,6 @@ html,body
 
     .circle
       position: absolute
-      // left: 0
-      // top: 0
       height: 200px
       width: 200px
       border-radius: 50%
@@ -91,11 +97,10 @@ html,body
   .features
 
     .row
-      border-top: 1px solid rgba(154, 150, 154, 0.65)
-      background: #121821
+      // background: #121821
       
       .feature-title
-        p
+        .left-title
           font-weight: 300
           color: #fff
           font-size: 65px
@@ -104,7 +109,7 @@ html,body
           letter-spacing: 1px
 
         @media (min-width: $screen-lg-min)
-          p
+          .left-title
             line-height: 440px
         
 
@@ -123,6 +128,10 @@ html,body
         @media (min-width: $screen-lg-min)
           p
             padding: 100px
+
+  #about
+    .row
+      background: #121821
 
   #skills
     .row
@@ -146,5 +155,60 @@ html,body
           padding: 0
           color: #fff
           font-weight: 100
+
+#projects
+  text-align: center
+
+  .wrapper
+    padding: 40px
+    margin: 0 auto
+    background: #eee
+
+    .row
+      .col-xs-12
+        margin-bottom: 20px
+
+      .thumbnail
+        border: none
+        background: #4c6961
+        margin-bottom: 0
+        border-radius: 0
+        padding: 20px
+
+      .caption
+        font-size: 14px
+        padding: 20px
+        text-align: left
+        color: #000
+        background: #fff
+        letter-spacing: 0.5px
+        line-height: 24px
+
+  @media (min-width: $screen-md-min)
+    .wrapper
+      padding: 40px 100px
+
+  @media (min-width: $screen-lg-min)
+    .wrapper
+      padding: 40px 200px
+
+  @media (min-width: 1500px)
+    .wrapper
+      padding: 40px 300px
+
+#footer
+  background: #fafafa
+  padding: 20px 0
+  min-height: 60px
+  text-align: left
+  color: #797979
+  font-size: 13px
+  line-height: 20px
+  letter-spacing: 0.5px
+  
+  a
+    color: inherit
+
+
 
 

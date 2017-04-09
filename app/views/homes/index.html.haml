@@ -21,8 +21,8 @@
 %div#about.features
   .row
     .col-sm-6.hidden-xs.feature-title.text-center
-      %p 
-        About
+      .left-title  
+        %p About
     .col-sm-6.col-xs-12.feature-detail
       %h1.visible-xs.text-center About
       %p I am studying for an MSc (Eng) Advanced Software Engineering at the University of Sheffield at the moment. As part of my study, I have the opportunity to work in a student-run software company that provides custom web applications for a variety of customers. Through this course, I can learn something new and hone my skills to become a better software developer.
@@ -30,34 +30,87 @@
 %div#skills.features
   .row
     .col-sm-6.hidden-xs.feature-title.text-center
-      %p 
-        Skills
+      %div.left-title
+        %p 
+          Skills
+          = fa_icon('code', class: 'fa-lg')
     .col-sm-6.col-xs-12.feature-detail
-      %h1.visible-xs.text-center Skills
+      %h1.visible-xs.text-center 
+        Skills
+        = fa_icon('code', class: 'fa-lg')
 
       %h4 WEB TECHNOLOGIES
-      %p HTML5, CSS3, SASS, JavaScript, PHP, Bootstrap, jQuery, Angular.js, AJAX, JSON, Grunt.js, Ruby on Rails
+      - @webtech_skills.each do |item|
+        %span.skills= item 
       %br/
 
       %h4 NATIVE PROGRAMMING LANGUAGE
-      %p Java, C#, Python, Objective-C, C++
+      - @native_skills.each do |item|
+        %span.skills= item 
       %br/
 
       %h4 VERSION CONTROL
-      %p Github, GitLab
+      - @version_skills.each do |item|
+        %span.skills= item 
       %br/
 
       %h4 CROSS-PLATFORM TOOLS
-      %p PhoneGap
+      %span.skills PhoneGap
       %br/
 
       %h4 DESIGN & PROTOTYPE
-      %p Moqups
+      %span.skills Moqups
       %br/
 
       %h4 DATABASE
-      %p MySQL
-  
+      %span.skills MySQL
+
+%div#projects.features
+  %div.wrapper
+    .row
+      %br/
+      %h1.text-center Projects
+      %br/
+      .col-sm-6.col-xs-12
+        .thumbnail{'style' => 'background: #71948a;'}
+          =image_tag("gallerysite.png", alt: "Project 1", class: "img-responsive logo")
+        .caption
+          %b Gallery
+          is an e-commerce website dedicated for selling pictures/photos of different scenery. It also
+          has an admin feature where the user can modify several pages of the website
+
+      .col-sm-6.col-xs-12
+        .thumbnail
+          =image_tag("project2.png", alt: "Project 2", class: "img-responsive logo")
+        .caption
+          %b Project Acquisition Application
+          is a Ruby on Rails web application that can handle project submission from clients to module leaders registered in The University of Sheffield. This is a part of Training Project of Genesys module.
+
+    .row
+      .col-xs-12
+        .thumbnail{'style' => 'background: #79a4c3;'}
+          =image_tag("imac.png", alt: "Project 3", class: "img-responsive logo")
+        .caption
+          %b LiftLog
+          is a pair project of the module Software Development for Mobile Devices (COM6510) from The University of Sheffield. This is an iOS application
+          focusing on a workout tracking. It can create daily workout routines,  add exercises to the routines, and store workout sets and repetitions for each exercise. On top of that, the users can get recent workout news/articles, which are retained from RSS of  a certain body building website. This app also implements a map that can show nearby gyms based on current user's location.
+
+%div#footer
+  %div.container
+    &copy; 2017 Christian Ing Sunardi
+
+    .pull-right
+      %span 
+        = link_to 'https://github.com/Christian-007', target: :_blank do
+          = fa_icon('github') 
+          Github 
+      %span /  
+      %span 
+        = link_to 'https://linkedin.com/in/christian-ing-sunardi-20b03a12b', target: :_blank do
+          = fa_icon('linkedin')
+          LinkedIn
+
+
   / %table
   /   %thead
   /     %tr
