@@ -19,3 +19,18 @@
 //= require select2_init
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+	$("a.page-scroll").on("click", function(event) {
+        var $anchors = $(this).attr("href");
+        $("html, body").animate({
+            scrollTop: $($anchors).offset().top - 30
+        }, 1500);
+        event.preventDefault();
+    });
+
+    // Closes the Responsive Menu on Menu Item Click
+	$(".navbar-collapse ul li a.page-scroll").on("click", function(){
+	    $(".navbar-toggle:visible").click();
+	});
+});

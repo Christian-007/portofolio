@@ -1,6 +1,16 @@
-%p#notice= notice
+#modalPicture
+  .row
+    .col-xs-12.text-right
+      %a.close{:href => "", "data-dismiss" => "modal", :type => "button"}
+        = fa_icon('close 2x')
+  %h1.text-center Lift Log Project (2017)
+  %br/
+  .modal-dialog
+    .thumbnail
+      =image_tag("liftlog_compressed.png", alt: "Project 3", class: "img-responsive logo")
+/ %p#notice= notice
 
 
-= link_to 'Edit', edit_home_path(@home)
-\|
-= link_to 'Back', homes_path
+/ = link_to 'Edit', edit_home_path(@home)
+/ \|
+/ = link_to 'Back', homes_path
