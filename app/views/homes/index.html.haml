@@ -111,6 +111,17 @@
             = link_to 'https://github.com/Christian-007/iOSProject', target: :_blank do
               https://github.com/Christian-007/iOSProject
 
+    .row
+      .col-xs-12
+        .thumbnail{'style' => 'background: #4DD0E1;'}
+          =image_tag("tardis.png", alt: "TaRDIS", class: "img-responsive logo")
+        .caption
+          %b Time and Resourcing Data Information System (TaRDIS)
+          is a Ruby on Rails web application that can assist Clinical Trials Research Unit (CTRU) of University of
+          Sheffield in Data Management process. It will manage the Data Management process, such as managing Studies, Tasks, and the time spent on each task by staff efficiently. These are handled by using sort of a Gantt chart
+          application on the web with added features, such as add people to tasks and time management report. The Gantt
+          chart itself is created manually (not using any Gantt Chart API) by utilising some of Bootstrap features to generate columns, combined with Ruby on Rails controllers and Active Record. This project is still under development and a part of Genesys 2 module of University of Sheffield.
+
 %div#footer
   %div.container
     .row
