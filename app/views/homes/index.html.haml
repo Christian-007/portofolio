@@ -72,7 +72,7 @@
       %h1.text-center.title PROJECTS
       %br/
       .col-sm-6.col-xs-12
-        .thumbnail{'style' => 'background: #71948a;'}
+        .thumbnail
           =image_tag("gallerysite.png", alt: "Project 1", class: "img-responsive logo")
         .caption
           %b Gallery Viewer
@@ -84,9 +84,20 @@
             %b Project Repository on Github: 
             = link_to 'https://github.com/Christian-007/gallery-website', target: :_blank do
               https://github.com/Christian-007/gallery-website
+        .caption-tag
+          %b Tags:
+          %span.skills HTML
+          %span.skills CSS3
+          %span.skills Bootstrap
+          %span.skills jQuery
+          %span.skills PHP
+          %span.skills AJAX
+          %span.skills MySQL
+          %span.skills Angular.js
+          %span.skills Grunt.js
 
       .col-sm-6.col-xs-12
-        .thumbnail{'style' => 'background: #78b3a3;'}
+        .thumbnail
           =image_tag("projectacq.png", alt: "Project 2", class: "img-responsive logo")
         .caption
           %b Project Acquisition Application
@@ -94,12 +105,20 @@
           a student-led software development organisation in Sheffield (
           %a{:href => 'https://www.epigenesys.org.uk/', target: :_blank} epiGenesys website
           )
+        .caption-tag
+          %b Tags:
+          %span.skills Ruby On Rails
+          %span.skills Bootstrap
+          %span.skills SASS
+          %span.skills jQuery
+          %span.skills AJAX
+          %span.skills Postgresql
 
     .row
       .col-xs-12
         / %a{:href => "", 'data-toggle' => "modal", 'data-target' => "#modalPicture", class: "ajax-modal"}
         / = link_to home_path(id: 1), class: 'ajax-modal', 'data-toggle': 'ajax-modal' do
-        .thumbnail{'style' => 'background: #79a4c3;'}
+        .thumbnail
           =image_tag("liftlog_compressed.png", alt: "Project 3", class: "img-responsive logo")
         .caption
           %b LiftLog
@@ -110,10 +129,17 @@
             %b Project Repository on Github: 
             = link_to 'https://github.com/Christian-007/iOSProject', target: :_blank do
               https://github.com/Christian-007/iOSProject
+        .caption-tag
+          %b Tags:
+          %span.skills Objective-C
+          %span.skills Core Data
+          %span.skills XML Parsing
+          %span.skills Segue Storyboard
+          %span.skills MapKit
 
     .row
       .col-xs-12
-        .thumbnail{'style' => 'background: #4DD0E1;'}
+        .thumbnail
           =image_tag("tardis.png", alt: "TaRDIS", class: "img-responsive logo")
         .caption
           %b Time and Resourcing Data Information System (TaRDIS)
@@ -121,6 +147,14 @@
           Sheffield in Data Management process. It will manage the Data Management process, such as managing Studies, Tasks, and the time spent on each task by staff efficiently. These are handled by using sort of a Gantt chart
           application on the web with added features, such as add people to tasks and time management report. The Gantt
           chart itself is created manually (not using any Gantt Chart API) by utilising some of Bootstrap features to generate columns, combined with Ruby on Rails controllers and Active Record. This project is still under development and a part of Genesys 2 module of University of Sheffield.
+        .caption-tag
+          %b Tags:
+          %span.skills Ruby On Rails
+          %span.skills Bootstrap
+          %span.skills SASS
+          %span.skills jQuery
+          %span.skills AJAX
+          %span.skills Postgresql
 
 %div#footer
   %div.container
