@@ -73,6 +73,37 @@
       %br/
       %h1.text-center.title PROJECTS
       %br/
+
+      .row
+      .col-xs-12
+        .thumbnail
+          =image_tag("dissertation.png", alt: "Project 3", class: "img-responsive logo")
+        .caption
+          %b Let's Eat Together
+          is my dissertation project of MSc(Eng) Advanced Software Engineeering degree from University of Sheffield. This is a cross-platform application built using
+          = link_to 'https://ionicframework.com/', target: :_blank do
+            Ionic 2 framework
+          and Node.js as the backend server that utilises SQLite database and RESTful API. It is a meal- event creation mobile application where people can host meal events at local eatery and others may join these events. People can also get recommended events
+          whenever they "star" users they like. 
+          %p
+          %p
+            %b *Demo: 
+            = link_to 'https://lets-eat-together-app.herokuapp.com/', target: :_blank do
+              https://lets-eat-together-app.herokuapp.com/
+            %br/
+            %b Project Repository on Github: 
+            = link_to 'https://github.com/Christian-007/eatTogether', target: :_blank do
+              https://github.com/Christian-007/eatTogether
+          %p.info *Please open this demo from a mobile phone or use the mobile view feature on Google Chrome to get the suitable screen size as its layout is based on mobile phones. Some features (such as Upload picture) may not work since it requires FileStorage API of targeted mobile platform.
+
+        .caption-tag
+          %b Tags:
+          %span.skills Ionic 2
+          %span.skills Angular 2 (TypeScript)
+          %span.skills SQLite
+          %span.skills Node.js
+          %span.skills RESTful API
+
       .col-sm-6.col-xs-12
         .thumbnail
           =image_tag("gallerysite.png", alt: "Project 1", class: "img-responsive logo")
